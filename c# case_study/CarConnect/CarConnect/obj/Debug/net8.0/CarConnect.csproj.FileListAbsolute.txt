@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\CarConnect.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\Interop.VSLangProj2.dll
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\CarConnect.csproj.ResolveComReference.cache
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\CarConnect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\CarConnect.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\CarConnect.AssemblyInfo.cs
+C:\Users\Admin\Desktop\c# case_study\CarConnect\CarConnect\obj\Debug\net8.0\CarConnect.csproj.CoreCompileInputs.cache
