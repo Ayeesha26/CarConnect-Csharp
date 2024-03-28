@@ -1,46 +1,31 @@
-﻿using System;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public static class dbconnection
+namespace CarConnect.Utils
 {
-    // Method to establish a connection to the SQL Server database
-    public static SqlConnection GetSqlConnection()
+    internal class DbUtils
     {
-        // Connection string with necessary information to connect to the database
-        string connectionString = "Server=DESKTOP-RIQ1MAN;Database=CarConnect;Integrated Security=true;";
+        private static IConfiguration _configuration;
 
-        // Create and return a new SqlConnection object
-        return new SqlConnection(connectionString);
-    }
-
-    // Method to execute SQL queries
-    public static void ExecuteSqlCommand(string query)
-    {
-        // Get connection
-        using (SqlConnection connection = GetSqlConnection())
+        static DbUtils()
         {
-            try
-            {
-                // Open connection
-                connection.Open();
-
-                // Create SqlCommand object
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    // Execute query
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions
-                Console.WriteLine("Error executing SQL command: ");
-            }
-            finally
-            {
-                // Close connection
-                connection.Close();
-            }
+            getAppSettings();
         }
+
+        static void getAppSettings()
+        {
+            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
+            _configuration = builder.Build();
+        }
+
+        public static string GetConnection() {
+            return _configuration.GetConnectionString("LocalConnectionString");
+        
+        }
+
     }
 }
